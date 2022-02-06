@@ -1,0 +1,198 @@
+:root {
+    --main-bg-color: #0E0B16;
+    --main-btn-color: #cf80ee; 
+    --main-hover-color: #4717F6;  
+    --main-border-color: #432371; 
+    --main-gradient: linear-gradient(
+        90deg,
+        #432371,
+        #714674,
+        #9F6976,
+        #CC8B79,
+        #FAAE7B
+    ); 
+}
+
+@media  only screen and (max-width: 600px) {
+    p {
+        font-size: 3vw; 
+    }
+    button, summary {
+        font-size: 3vw; 
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    p {
+        font-size: 2.25vw; 
+    }
+    button, summary {
+        font-size: 2vw; 
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    p {
+        font-size: 1.5vw; 
+    }
+
+}
+
+@media only screen and (min-width: 1200px) {
+    button, summary {
+        font-size: 1.5vw; 
+    }
+}
+
+html, body {
+    margin: 0; 
+    padding: 0; 
+}
+
+body {
+    font-family:"Work Sans", Arial, Helvetica, sans-serif; 
+    background-color: var(--main-bg-color);
+    color: white; 
+}
+
+#selection-btns {
+    margin-top: 5vh;
+}
+
+
+button {
+    font-family: "Work Sans", Arial, Helvetica, sans-serif; 
+    background-color: var(--main-btn-color);
+    border-radius: 5px; 
+    padding: 2vh; 
+    margin-bottom: 3vh; 
+    font-style: sans-serif; 
+    width: 25vw; 
+    max-width: 400px; 
+    height: 20vh; 
+    max-height: 100px; 
+    border: 0 solid; 
+    margin: 1vw; 
+    display: inline-block; 
+    font-weight: 500; 
+    cursor: pointer; 
+    background-image: var(--main-gradient); 
+    background-size: 350%;
+    transition: background-position .4s; 
+    color: white; 
+
+}
+
+#title-container {
+    max-height: 50vh; 
+}
+
+
+img {
+    height: auto; 
+    width: 15vw; 
+    max-width: 200px; 
+}
+
+#spotify-img {
+    margin-bottom: 3vh; 
+}
+
+#spotify-logo:hover {
+    cursor: pointer;
+}
+
+#selection-btns>button:hover, #selection-btns>button:focus {
+    background-position: right; 
+    background-color: var(--main-hover-color);
+    color: var(--main-bg-color); 
+    color: white;   
+}
+
+#selection-btns>button:active {
+    color: white; 
+}
+
+#selection-btns>button:visited {
+    border-color: #54428E; 
+    border-style: outset; 
+}
+
+#top-number-selectId {
+    margin-right: 3vw; 
+}
+
+#footer-container { 
+    position: absolute; 
+    bottom: 0; 
+    width: 100%; 
+    height: 2vh;
+    margin-bottom: 0;  
+    margin-top: 1vh;
+    background-color: var(--main-border-color);
+}
+
+#footer-text {
+    text-align: center;
+    width: 90vw; 
+    padding-top: 1vh; 
+    padding-bottom: 1vh; 
+}
+
+.center {
+    margin: auto; 
+    display: table; 
+}
+
+#name {
+    font-size: 7vw;
+}
+
+#main-title {
+    margin: 5vh auto 0 auto;
+    width: 82vw;      
+}
+
+#spotimatch-info {
+    margin-top: 3vh; 
+    font-size: 1.5vw; 
+    padding: 1vw 1vw 1vh 1vh;
+    text-align: center;
+    width: fit-content; 
+    font-style: italic; 
+    border-radius: 5px; 
+}
+
+
+.unopened-summary:hover, .unopened-details:hover {
+    background-position: right; 
+    background-image: var(--main-gradient);
+    border-radius: 5px; 
+}
+
+.opened-summary {
+    border: none; 
+}
+
+summary, details {
+    cursor: pointer; 
+    transition: background-position 0.4s; 
+    background-size: 350%; 
+}
+
+
+summary {
+    /* font-size: 3vw; */
+    border: 3px solid var(--main-border-color); 
+    padding: 1vh; 
+    border-radius: 5px; 
+}
+
+details > p {
+    text-align: left;
+    padding-left: 1vw; 
+    padding-right: 1vw;
+    padding-bottom: 1vh;    
+}
+
+

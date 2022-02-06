@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work+Sans">
+    <link rel="stylesheet" href="css/statistics.css">
+    <title>Statistics</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+</head>
+<body onload="onPageLoad()">
+    <div id="header-container">
+        <span class="web-title" id="title">Your Spotify Statistics</span>
+        <a class="nav-header" id="home-btn" href="/">Home</a>
+    </div>
+    </div>
+    </div>
+    <div id="nav-container">
+        <table id="nav-table" class='center'>
+            <tbody>
+                <tr>
+                    <td class='nav-table-tr'><a href="#top-artists">Top Artists</a></td>
+                    <td class='nav-table-tr'><a href="#top-songs">Top Songs</a></td>
+                    <td class='nav-table-tr'><a href="#top-albums">Top Albums</a></td>
+                    <td class='nav-table-tr'><a href="#top-genres">Top Genres</a></td>
+                    <td class='nav-table-tr'><a href="#playlist-breakdown">Playlist Breakdown</a></td>
+                    <td class='nav-table-tr'><a href="#daily-listening-time">Listening Time</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="select-number-container" class='center'>    
+        <table>
+            <tbody>
+                <tr>
+                    <td><label for="top-number" class='select-number center'>Select how many items you would like to see: </label></td>
+                    <td><select class='select-number' name="top-number" id="top-number-selectId">
+                            <option value="5" selected="selected">5</option>
+                            <option value="10">10</option>
+                            <option value="20">20</option>
+                            <option value="50">50</option>
+                        </select></td>
+                </tr>
+            </tbody>
+        </table>
+            </select>
+        </div>
+    </div>
+    </div>
+    <div id="statistics-container">
+        <div id="top-artists" class='stat-div'>
+            <h2>Top Artists</h2>
+            <ol class="top-artist-list" id="top-artist-listId"></ol>
+            <hr>
+        </div>
+        <div id="top-songs" class='stat-div'>
+            <h2>Top Songs</h2>
+            <ol class="top-song-list" id="top-song-listId"></ol>
+            <hr>
+        </div>
+        <div id="top-albums" class='stat-div'>
+            <h2>Top Albums</h2>
+            <ol class="top-album-list" id="top-album-listId"></ol>
+            <hr>
+        </div>
+        <div id="top-genres" class='stat-div'>
+            <h2>Top Genres</h2>
+            <ol class="top-genres-list" id="top-genres-listId"></ol>
+            <hr>
+        </div>
+        <div id="playlist-breakdown" class='stat-div'>
+            <h2>Top Playlist Breakdown</h2>
+            <p>Click on the image of the playlist to see the top albums, genres, and artists.</p>
+            <br>
+            <div id="selected-playlist" class='col-2'>
+                <span id="selected-playlist-name">Click Playlist</span>
+                <br>
+                <img id="large-display-playlist" src="/images/Spotify_Icon_RGB_White.png" alt="Choose Playlist">
+                <div id="expanded-playlist-div"></div>
+                <button type="button" id="clear-button" class="col-2">Clear Playlist</button>
+            </div>
+            <div id="playlist-table" class='col-2'>
+                <br>
+                <table id="playlist-breakdown-table">
+                    <tbody id="playlist-breakdown-tbody"></tbody>
+                </table>
+            </div>
+        </div>
+        <hr>
+        <div id="daily-listening-time" class='stat-div'>
+            <h2>Daily Listening Time</h2>
+            <div id="chart-explanation">
+                <p>
+                    This chart shows what time of day you typically listen to music. 
+                </p>
+            <h5 class="center">When were your last 50 streams?</h5>
+            <br>
+            </div>
+            <div id="chartDiv" style="width:80%; height:300px; margin:0 auto;">
+                <canvas id="chartCanvasId"></canvas>
+            </div>
+            <hr>
+        </div>
+        </div>
+    </div>
+    <div id="footer-container" class="center">
+        <footer id="footer-text" class='center'> Created By Ben Jackman, Dr. Kavous Roumina, Dr. Daniel Mazzola | Department of Information Systems at W.P. Carey School of Business | Barrett, the Honors College</footer>
+    </div>
+    <script src="js/statistics.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+</body>
+</html>
+
+

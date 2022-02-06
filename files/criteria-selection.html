@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criteria</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work+Sans">
+    <link rel="stylesheet" href="css/criteria-selection.css">
+</head>
+<body>
+    <header class='center'>
+        <h1 class='center'>Choose your search criteria</h1>
+        <br>
+        <h4 class="center">Which option you choose will determine by what metric you will be matched with the most similar concurrent user.</h4>
+    </header>
+    <div class="center" id="main">
+        <div class='center' id='criteria-selection-div'> 
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class='center criteria-div'>
+                                <button class="center criteria-btn" id="top-artists" onclick="chooseCriteria('topArtists')">Top Artists</button>
+                                <p class="center users-online" id="users-online-top-artists"></p>
+                            </div>
+                        </td>
+                        <td>
+                            <div class='center criteria-div'>
+                                <button class="center criteria-btn" id="top-albums" onclick="chooseCriteria('topAlbums')">Top Albums</button>
+                                <p class="center users-online" id="users-online-top-albums"></p>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class='center criteria-div'>
+                                <button class="center criteria-btn" id="top-genres" onclick="chooseCriteria('topGenres')">Top Genres</button>
+                                <p class="center users-online" id="users-online-top-genres"></p>
+                            </div>
+                        </td>
+                        <td>
+                            <div class='center criteria-div'>
+                                <button class="center criteria-btn" id="top-songs" onclick="chooseCriteria('topSongs')">Top Songs</button>
+                                <br>
+                                <p class="center users-online" id="users-online-top-songs"></p>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="center" id="submit-div">
+            <button class="center criteria-btn" id="random" onclick="chooseCriteria('random')">Random</button>
+            <p class="center users-online" id="users-online-random"></p>
+            <button class="center" id="confirm-btn" onclick="handleRedirect()">Confirm</button>
+        </div>
+        <script src="js/criteria-selection.js"></script>
+    </div>
+</body>
+</html>

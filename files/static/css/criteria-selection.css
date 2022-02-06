@@ -1,0 +1,161 @@
+:root {
+    --main-bg-color: #0E0B16;
+    --main-btn-color: #cf80ee; 
+    --main-hover-color: #4717F6; 
+    --main-border-color: #432371; 
+    --user1-color: rgb(212, 147, 218); 
+    --user2-color: #FAAE7B ; 
+    --main-gradient: linear-gradient(
+        90deg,
+        #432371,
+        #714674,
+        #9F6976,
+        #CC8B79,
+        #FAAE7B
+    ); 
+}
+
+
+@media only screen and (max-width: 600px) {
+    button {
+        font-size: 4vw; 
+    }
+
+    p {
+        font-size: 4vw; 
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    button {
+        font-size: 4vw; 
+    }
+    
+    p {
+        font-size: 3vw; 
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    button {
+        font-size: 3vw; 
+    }
+
+    p {
+        font-size: 2.5vw; 
+    }
+
+}
+
+@media only screen and (min-width: 992px) {
+    button {
+        font-size: 3vw; 
+    }
+
+    p {
+        font-size: 2vw; 
+    }
+
+}
+
+@media only screen and (min-width: 1200px) {
+    button {
+        font-size: 2vw; 
+    }
+
+    p {
+        font-size: 1.5vw; 
+    }
+
+}
+
+
+.center {
+    margin: auto; 
+    display: table; 
+}
+
+html, body {
+    margin: 0; 
+    padding: 0; 
+    height: 100%; 
+    box-sizing: border-box;
+    width: 100%; 
+}
+
+body {
+    font-family:"Work Sans", Arial, Helvetica, sans-serif; 
+    background-color: var(--main-bg-color);
+    color: white; 
+}
+
+.criteria-btn, .selected-btn, #confirm-btn {
+    font-family: "Work Sans", Arial, Helvetica, sans-serif; 
+    border-color: var(--main-bg-color);
+    border-radius: 5px; 
+    border: 0px solid;  
+    padding-top: 1.25vh;
+    padding-bottom: 1.25vh; 
+    padding-left: 0; 
+    padding-right: 0vw; 
+    font-style: sans-serif; 
+    width: 30vw; 
+    display: inline-block; 
+    font-weight: 500; 
+    cursor: pointer; 
+    background-size: 350%;
+    transition: background-position .4s; 
+    color: white;  
+    clear: none;
+    text-decoration: none;
+    text-align: center;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    margin-bottom: 0;
+    cursor: pointer;    
+}
+
+.criteria-btn, #confirm-btn {
+    background-image: var(--main-gradient); 
+}
+
+#confirm-btn {
+    margin-bottom: 0;
+    background-color: #4717F6; 
+    background-image: #4717F6; 
+    display: none; 
+    margin-top: 10vh;
+}
+
+button[disabled=disabled], button:disabled {
+    background-image: gray; 
+}
+
+.selected-btn {
+    background-color: var(--main-hover-color); 
+    margin-bottom: 0; 
+}
+
+tr {
+    margin: 2vw;
+    height: auto; 
+    width: auto;  
+}
+
+header {
+    padding: 3vh; 
+}
+
+a:hover, button:hover, .month-header:hover, .month-header:focus {
+    background-position: right; 
+    background-color: var(--main-hover-color);
+    color: var(--main-bg-color); 
+    color: white;    
+}
+
+#main {
+    background-color: var(--main-bg-color);
+    padding: 3vw; 
+    border-radius: 10px; 
+}
+

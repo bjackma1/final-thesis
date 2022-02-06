@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anthemy</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work+Sans">
+    <link rel="stylesheet" href="css/landing.css">
+</head>
+    <body>
+        <div id="title-container" class='center'>
+            <div id="main-title" class="center">
+                <span id="name" class='center'>Anthemy</span>
+                <br>
+                <span id="spotify-img" class='center'>Powered by </span>
+                <img src="/images/Spotify_Logo_RGB_White.png" alt="spotify-logo" class="center" id='spotify-logo'>
+                <div id="spotimatch-info" class='center'>
+                    <details id="details" class='center unopened-details'>
+                        <summary class='unopened-summary'>About Anthemy</summary>
+                        <p id="spotimatch-details" class="center">
+                            Anthemy is a new and innovative way to engage with others who enjoy similar music.
+                            The website will try its best to pair you with someone, and you can chat about all 
+                            the music that you love! You can also see all of your favorite statistics, like your 
+                            top genres, songs, and artists, as well as a breakdown of all your playlists.
+                        </p>
+                    </details>
+                </div>
+            </div>
+        </div>
+        <div class="center" id="selection-btns">
+                <button id="chat-btn" onclick="getAuthURL()">Chat</button>
+                <button id="stat-btn" onclick="window.location.href='./statistics'">Statistics</button>
+        </div>
+        <div id="footer-container" class="center">
+            <footer id="footer-text" class='center'> Created By Ben Jackman, Dr. Kavous Roumina, Dr. Daniel Mazzola | Department of Information Systems at W.P. Carey School of Business | Barrett, the Honors College</footer>
+        </div>
+        <script src="js/landing.js"></script>
+    </body>
+</html>

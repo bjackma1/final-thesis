@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chat</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work+Sans">
+    <link rel="stylesheet" href="css/chat.css">
+</head>
+<body onload="onPageLoad()">
+    <div id="main-container">
+        <div id="home-chat-container">
+            <a class="nav-header" id="home-btn" href="/">Home</a>
+            <a class="nav-header" id="chat-btn" href="/statistics">Statistics</a>
+        </div>
+        <div id="header-container" class="center">
+            <span id="title">Anthemy</span>
+            </div>
+        <div id="new-room" class="center">
+            <button id="find-new-person" class="center" onclick="changeRoom()">find someone else</button>
+        </div>
+        <div id="info-container" class="col-1">
+            <div id="user-info-container" class="user-info-container center col-3">
+                <table id="user-info-table">
+                    <tr>
+                        <td class="user1-info" colspan="2"><h3 class="user1" id="user1-name"></h3></td>
+                        <td class="user2-info" colspan="2"><h3 class="user2" id="user2-name"></h3></td>
+                    </tr>
+                    <tr>
+                        <td class="user1 table-label">Top Genres: </td><td class="user1 table-value" id="user1-top-genre"></td>
+                        <td class="user2 table-label">Top Genres: </td><td class="user2 table-value" id="user2-top-genre"></td>
+                    </tr>
+                    <tr>
+                        <td class="user1 table-label">Top Artists: </td><td class="user1 table-value" id="user1-top-artist"></td>
+                        <td class="user2 table-label">Top Artists: </td><td class="user2 table-value" id="user2-top-artist"></td>
+                    </tr>
+                    <tr>
+                        <td class="user1 table-label">Top Albums: </td><td class="user1 table-value" id="user1-top-album"></td>
+                        <td class="user2 table-label">Top Albums: </td><td class="user2 table-value" id="user2-top-album"></td>
+                    </tr>
+                    <tr>
+                        <td class="user1 table-label">Top Songs: </td><td class="user1 table-value" id="user1-top-song"></td>
+                        <td class="user2 table-label">Top Songs: </td><td class="user2 table-value" id="user2-top-song"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div id="chat-container" class="col-1">
+            <div id="chat-display-box" class="center">
+            </div>
+            <div id="chat-entry-box" class="center">
+                <form id="form">
+                    <input type="text" id="input" autocomplete="off" placeholder="enter message"/>
+                </form>
+            </div>
+        </div>
+        <div id="blank-screen-waiting">
+            <h2 id="waiting" class="center">Waiting for data to load...</h2>
+        </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/chat.js"></script>
+</body>
+ 
